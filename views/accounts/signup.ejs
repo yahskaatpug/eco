@@ -1,0 +1,22 @@
+<% layout('boilerplate') -%>
+<div class="container">
+    <%if(errors.length>0){%>
+        <div class="alert alert-danger">
+            <strong>Danger! </strong><%= errors %>
+          </div>
+        
+    <%}%>
+    
+        <div class="row">
+        <h1 style="text-align: center">SignUp</h1>
+        <div style="width:30%;margin:0 auto;">
+    <form action="/signup" method="POST">
+        <input class="form-control" type="text" name="name" placeholder="username">
+        <input class="form-control" type="email" name="email" placeholder="Email">
+
+        <input class="form-control" type="password" name="password" placeholder="password">
+        <button class="btn btn-primary btn-large">Submit</button>
+    </form>
+        </div>
+            </div>
+    </div>
